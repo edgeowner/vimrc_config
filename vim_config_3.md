@@ -1,81 +1,89 @@
 ### Mac下Vim开发配置（三）
 
-#### Mac 下终端配置（item2 + oh-my-zsh +3024Night 配色方案)
-安装插件建议使用[Vundle](https://github.com/VundleVim/Vundle.vim)进行安装，Vundle的用法很简单，可以到GitHub上面查看。
+#### Mac下终端配置配色方案（item2 + oh-my-zsh +3024Night)
+##### 配置
+将iTem2设置为默认终端：
+（菜单栏）iTerm2 -> Make iTerm2 Default Term
 
-在NERDTree操作区的一些基本操作:
-``` vim
-?: 快速帮助文档
-o: 打开一个目录或者打开文件，创建的是buffer，也可以用来打开书签
-go: 打开一个文件，但是光标仍然留在NERDTree，创建的是buffer
-t: 打开一个文件，创建的是Tab，对书签同样生效
-T: 打开一个文件，但是光标仍然留在NERDTree，创建的是Tab，对书签同样生效
-i: 水平分割创建文件的窗口，创建的是buffer
-gi: 水平分割创建文件的窗口，但是光标仍然留在NERDTree
-s: 垂直分割创建文件的窗口，创建的是buffer
-gs: 和gi，go类似
-x: 收起当前打开的目录
-X: 收起所有打开的目录
-e: 以文件管理的方式打开选中的目录
-D: 删除书签
-P: 大写，跳转到当前根路径
-p: 小写，跳转到光标所在的上一级路径
-K: 跳转到第一个子路径
-J: 跳转到最后一个子路径
-<C-j>和<C-k>: 在同级目录和文件间移动，忽略子目录和子文件
-C: 将根路径设置为光标所在的目录
-u: 设置上级目录为根路径
-U: 设置上级目录为跟路径，但是维持原来目录打开的状态
-r: 刷新光标所在的目录
-R: 刷新当前根路径
-I: 显示或者不显示隐藏文件
-f: 打开和关闭文件过滤器
-q: 关闭NERDTree
-A: 全屏显示NERDTree，或者关闭全屏
+
+##### 配色方案
+我选用的是3024Night,可以自行配置喜欢的主题，这个在官网有很多，自己下载http://iterm2colorschemes.com 
+
+安装oh-my-zsh
+github连接：https://github.com/robbyrussell/oh-my-zsh
+
+使用 crul 安装：
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-以上是一些基本的用法，平时常用的就几个。
-
-#### 增加一些配置
-在使用NERDTree的过程中有一些不太方便的地方就是打开的过个文件不共享NERDTree，所以就需要配合安装一个共享插件[vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)，这就让你赶紧只是打开了一个NERDTree
-``` vim
-" 关闭NERDTree快捷键
-map <leader>t :NERDTreeToggle<CR>
-" 显示行号
-let NERDTreeShowLineNumbers=1
-let NERDTreeAutoCenter=1
-" 是否显示隐藏文件
-let NERDTreeShowHidden=1
-" 设置宽度
-let NERDTreeWinSize=31
-" 在终端启动vim时，共享NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-" 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-" 显示书签列表
-let NERDTreeShowBookmarks=1
+或使用wget：
+```
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-#### 在NERDTree 中显示git信息
-开发的过程中，我们希望git信息直接在NERDTree中显示出来，和Eclipse一样，修改的文件和增加的文件都给出相应的标注，这时需要安装的插件就是[nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+##### 主题
 
-配置信息如下
-``` vim
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+安装成功后，用vim打开隐藏文件 .zshrc ，修改主题为 agnoster：
 ```
-NERDTree配合使用这两个插件文件管理就很棒了，当然如果再加上ctrlp，那就无敌了。
+ZSH_THEME="agnoster"
+```
+应用这个主题需要特殊的字体支持，否则会出现乱码情况，这时我们来配置字体：
 
-####  
+1.使用 Meslo 字体，点开连接点击 view raw 下载字体。
 
+2.安装字体到系统字体册。
+
+3.应用字体到iTerm2下，我自己喜欢将字号设置为16px，看着舒服（iTerm -> Preferences -> Profiles -> Text -> Change Font）。
+
+4.重新打开iTerm2窗口，这时便可以看到效果了。 
+
+到这步我们的终端看上去已经非常好看了，这时我们来安装其它插件，让终端看起来更加风骚。
+
+
+##### 自动提示命令
+当我们输入命令时，终端会自动提示你接下来可能要输入的命令，这时按 → 便可输出这些命令，非常方便。
+
+设置如下：
+
+1.克隆仓库到本地 ~/.oh-my-zsh/custom/plugins 路径下
+```
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+2.用 vim 打开 .zshrc 文件，找到插件设置命令，默认是 plugins=(git) ，我们把它修改为
+```
+plugins=(zsh-autosuggestions git)
+```
+3.重新打开终端窗口。
+PS：当你重新打开终端的时候可能看不到变化，可能你的字体颜色太淡了，我们把其改亮一些：
+```
+cd ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 
+vim zsh-autosuggestions.zsh
+```
+修改 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10' （ fg=10 在我电脑上显示良好）。
+
+##### 语法高亮
+1.使用homebrew安装 zsh-syntax-highlighting 插件。
+```
+brew install zsh-syntax-highlighting
+```
+2.配置.zshrc文件，插入一行。
+```
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+3.输入命令。
+```
+source ~/.zshrc
+```
+4.ls
+
+Mac OS X 是基于 FreeBSD 的，所以一些工具 ls, top 等都是 BSD 那一套，ls 不是 GNU ls，所以即使 Terminal/iTerm2 配置了颜色，但是在 Mac 上敲入 ls 命令也不会显示高亮，可以通过安装 coreutils 解决
+```
+brew install coreutils
+```
+PS：安装homebrew包管理工具：
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 
