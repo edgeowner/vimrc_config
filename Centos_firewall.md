@@ -35,6 +35,14 @@ firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent
 ```
 systemctl start firewalld.service
 ```
+如何出现
+```
+Failed to start firewalld.service: Unit firewalld.service is masked.
+```
+执行下列命令
+```
+systemctl unmask firewalld.service
+```
 
 **重启防火墙命令**：
 ```
@@ -68,5 +76,8 @@ systemctl status firewalld或者 firewall-cmd --state
 
 #### 参考
 1. [Centos7（Firewall）防火墙开启常见端口命令](https://www.5yun.org/10074.html)
+2. [Centos防火墙设置与端口开放的方法](https://blog.csdn.net/u011846257/article/details/54707864)
+3. [Linux Centos 开启防火墙 FirewallD is not running](https://www.cnblogs.com/cocoat/p/6605482.html)
+4. [CentOS 7.0 配置防火墙](https://www.jianshu.com/p/2abcbd51ded5)
 
 

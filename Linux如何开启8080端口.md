@@ -1,4 +1,4 @@
-### Centos7 apt-get安装
+### Linux中如何开启8080端口供外界访问
 
 Centos7默认安装了firewalld，如果没有安装的话，则需要YUM命令安装；firewalld真的用不习惯，与之前的iptable防火墙区别太大，但毕竟是未来主流讲究慢慢磨合它的设置规则；
 
@@ -68,6 +68,9 @@ systemctl status firewalld或者 firewall-cmd --state
 
 #### 参考
 1. [Centos7（Firewall）防火墙开启常见端口命令](https://www.5yun.org/10074.html)
-* 2. [centOS安装telnet服务和xinetd服务和iptables和linux运行级别](https://blog.csdn.net/typa01_kk/article/details/46604967)
+2. [linux系统分析工具之netstat（六）](http://blog.51cto.com/xuclv/1166393)
+3. [每天一个linux命令（56）：netstat命令](http://www.cnblogs.com/peida/archive/2013/03/08/2949194.html)
+4. [Linux查看端口占用情况和开启端口命令](https://blog.csdn.net/ljbmxsm/article/details/50650008)
+5. [linux如何查看正在使用的端口](https://blog.csdn.net/q361239731/article/details/53180126)
 
 
