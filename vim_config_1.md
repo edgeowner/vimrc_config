@@ -75,7 +75,9 @@ let g:NERDTreeIndicatorMapCustom = {
 ```
 NERDTree配合使用这两个插件文件管理就很棒了，当然如果再加上ctrlp，那就无敌了。
 
-####  
+#### 参考
+1. [上古神器vim插件](https://www.jianshu.com/p/3066b3191cb1)
+2. [Mac 下终端配置（item2 + oh-my-zsh +3024Night 配色方案)](https://segmentfault.com/a/1190000010518195)
 
 
 
