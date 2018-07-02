@@ -79,5 +79,9 @@ systemctl status firewalld或者 firewall-cmd --state
 2. [Centos防火墙设置与端口开放的方法](https://blog.csdn.net/u011846257/article/details/54707864)
 3. [Linux Centos 开启防火墙 FirewallD is not running](https://www.cnblogs.com/cocoat/p/6605482.html)
 4. [CentOS 7.0 配置防火墙](https://www.jianshu.com/p/2abcbd51ded5)
+5. [CentOS 7.0 配置防火墙](https://www.jianshu.com/p/c9c24b3a1c53)
+6. [Centos6.9配置防火墙iptables规则](https://www.jianshu.com/p/79734f53f68c)
+7. [Centos7 安装Nodejs](https://www.jianshu.com/p/7d3f3fa056e8)
+8. [Linux中如何开启8080端口供外界访问](http://www.cnblogs.com/xiandedanteng/p/3287751.html)
 
 

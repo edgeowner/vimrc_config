@@ -67,7 +67,6 @@ systemctl status firewalld或者 firewall-cmd --state
 
 
 #### 参考
-1. [Centos7（Firewall）防火墙开启常见端口命令](https://www.5yun.org/10074.html)
-* 2. [centOS安装telnet服务和xinetd服务和iptables和linux运行级别](https://blog.csdn.net/typa01_kk/article/details/46604967)
-
+1. [centOS安装telnet服务和xinetd服务和iptables和linux运行级别](https://blog.csdn.net/typa01_kk/article/details/46604967)
+2. 
 

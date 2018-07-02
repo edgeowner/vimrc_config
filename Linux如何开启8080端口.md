@@ -73,4 +73,6 @@ systemctl status firewalld或者 firewall-cmd --state
 4. [Linux查看端口占用情况和开启端口命令](https://blog.csdn.net/ljbmxsm/article/details/50650008)
 5. [linux如何查看正在使用的端口](https://blog.csdn.net/q361239731/article/details/53180126)
 
+```
+```
 
