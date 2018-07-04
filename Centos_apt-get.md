@@ -10,16 +10,18 @@ yum install firewalld firewalld-config
 
 **Firewall开启常见端口命令**：
 ```
-firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=8083/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --zone=public --add-port=22/tcp --permanent
 firewall-cmd --zone=public --add-port=21/tcp --permanent
 firewall-cmd --zone=public --add-port=53/udp --permanent
 ```
 
+
+
 **Firewall关闭常见端口命令**：
 ```
-firewall-cmd --zone=public --remove-port=80/tcp --permanent
+firewall-cmd --zone=public --remove-port=8083/tcp --permanent
 firewall-cmd --zone=public --remove-port=443/tcp --permanent
 firewall-cmd --zone=public --remove-port=22/tcp --permanent
 firewall-cmd --zone=public --remove-port=21/tcp --permanent

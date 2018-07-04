@@ -72,7 +72,6 @@ systemctl status firewalld或者 firewall-cmd --state
 3. [每天一个linux命令（56）：netstat命令](http://www.cnblogs.com/peida/archive/2013/03/08/2949194.html)
 4. [Linux查看端口占用情况和开启端口命令](https://blog.csdn.net/ljbmxsm/article/details/50650008)
 5. [linux如何查看正在使用的端口](https://blog.csdn.net/q361239731/article/details/53180126)
-
-```
-```
+6. [Docs » Linux基础 » 8. 用户管理工具](http://linuxtools-rst.readthedocs.io/zh_CN/latest/base/08_user_manage.html)
+7. [源码解析](http://www.iocoder.cn/chinese-comment-repository/)
 
