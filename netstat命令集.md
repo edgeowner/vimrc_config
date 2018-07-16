@@ -109,7 +109,20 @@ netstat -i
 ```
 netstat -nat |awk '{print $6}'
 ```
-TCP各种状态列表
+
+#### 12. 查询网络端口占用情况
+netstat命令
+```
+netstat -an | grep 3306
+```
+lsof命令
+```
+lsof -i:80
+```
+查看所有进程监听的端口
+```
+sudo lsof -i -P | grep -i "listen"
+```
 
 
 ### 参考：
