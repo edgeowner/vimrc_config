@@ -14,13 +14,17 @@ mathjax: true
 5. [Vundle 的插件](https://vimawesome.com/)
 6. [Vi 使用 Vundle 管理插件执行 PluginInstall 出错](https://unmi.cc/vi-vundle-plugininstall-errors/)
 7. [搭建VIM的GoLang开发环境](http://guochongxin.github.io/go/golang/tagbar/vim/vim-go/vim-gocode/vim-godef/2015/05/02/configurate_golang_devlepment_environment_over_vim)
-8. [Golang开发环境搭建-Vim篇](https://studygolang.com/articles/1785)
-9. [使用vim-go插件进行golang开发](https://studygolang.com/articles/8605)
+8.[Golang开发环境搭建-Vim篇](https://studygolang.com/articles/1785)
+9.[使用vim-go插件进行golang开发](https://studygolang.com/articles/8605)
 10.[Go语言环境搭建详解](http://www.flysnow.org/2017/01/05/install-golang.html)
 11.[vim-go.txt](vim-go/doc/vim-go.txt)
 12.[Processon帮助文档](https://www.processon.com/support#flow-siwmming-pool)
 13.[开发工程师的Vim跟IDE一样](https://segmentfault.com/a/1190000008097357)
-
+14.[vim-web](https://github.com/jaywcjlove/vim-web/blob/master/.vimrc)
+15.[使用插件打造实用vim工作环境](https://www.jianshu.com/p/56385f4f95f5)
+16.[VimAwesome](https://vimawesome.com/?q=cat%3Acompletion)
+17.[耗时整整一天，整理出的超详细清晰的vim，vimrc配置](https://www.jianshu.com/p/a8033ea6b307)
+18.[Vim的NerdTree插件](https://segmentfault.com/a/1190000015143474)
 
 
 

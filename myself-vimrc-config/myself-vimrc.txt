@@ -302,8 +302,7 @@ autocmd vimenter * if !argc()|NERDTree|endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif       "当NERDTree为剩下的唯一窗口时自动关闭
 let g:NERDTreeDirArrowExpandable = '▸'  "设置树的显示图标
 let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
-"let g:NERDTreeShowLineNumbers=1  " 是否显示行号
+let g:NERDTreeShowLineNumbers=1  " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeMinimalUI = 1 "Making it prettier
 let NERDTreeDirArrows = 1
