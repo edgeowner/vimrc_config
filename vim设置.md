@@ -19,6 +19,7 @@ mathjax: true
 10.[Go语言环境搭建详解](http://www.flysnow.org/2017/01/05/install-golang.html)
 11.[vim-go.txt](vim-go/doc/vim-go.txt)
 12.[Processon帮助文档](https://www.processon.com/support#flow-siwmming-pool)
+13.[开发工程师的Vim跟IDE一样](https://segmentfault.com/a/1190000008097357)
 
 
 
