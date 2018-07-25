@@ -21,7 +21,7 @@ set encoding=utf-8
 
 
 
-" Setting up Vundle - the best vim plugin manager
+" Setting up Vundle -the best vim plugin manager
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
@@ -237,7 +237,7 @@ nmap ,wr :RecurGrepFast <cword><CR>
 
 " use 256 colors when possible
 if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
-	let &t_Co = 256
+  let &t_Co = 256
     colorscheme molokai
 else
     colorscheme delek
@@ -306,7 +306,22 @@ let g:NERDTreeShowLineNumbers=1  " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeMinimalUI = 1 "Making it prettier
 let NERDTreeDirArrows = 1
-let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__'] 
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
+let g:NERDTreeDirArrows = 0
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:NERDTreeIndicatorMapCustom = {
+      \ "Modified"  : "✹",
+      \ "Staged"    : "✚",
+      \ "Untracked" : "✭",
+      \ "Renamed"   : "➜",
+      \ "Unmerged"  : "═",
+      \ "Deleted"   : "✖",
+      \ "Dirty"     : "✗",
+      \ "Clean"     : "✔︎",
+      \ "Unknown"   : "?"
+      \ }
+" }}}
+
 
 " NERDTree: File highlighting 文件列表，文件名字各种颜色高亮
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -325,6 +340,7 @@ call NERDTreeHighlightFile('css',    'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js',     'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515') 
+
 " NERDTree Config END----------------------------- 
 
 
@@ -507,6 +523,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on the README.rst)
@@ -514,9 +531,9 @@ if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
 let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
+" let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
+" let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
@@ -560,12 +577,12 @@ function SetTitle()
     elseif &filetype == 'python'
         call setline(1,"#!/usr/bin/env python")
         call append(line("."),"# coding=utf-8")
-	    call append(line(".")+1, "") 
+      call append(line(".")+1, "") 
 
     elseif &filetype == 'ruby'
         call setline(1,"#!/usr/bin/env ruby")
         call append(line("."),"# encoding: utf-8")
-	    call append(line(".")+1, "")
+      call append(line(".")+1, "")
     endif
 endfunction
 autocmd BufNewFile * normal G
