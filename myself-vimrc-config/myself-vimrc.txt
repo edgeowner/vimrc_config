@@ -1,4 +1,5 @@
 scriptencoding utf-8
+
 " ============================================================================
 " Author: edgeowner
 " Blog: http://edgeowner.com
@@ -18,8 +19,6 @@ endif
 " no vi-compatible
 set nocompatible
 set encoding=utf-8
-
-
 
 " Setting up Vundle -the best vim plugin manager
 let iCanHazVundle=1
@@ -95,7 +94,8 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/xml.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Plugins from vim-scripts repos:
 Plugin 'IndexedSearch'      " Search results counter
@@ -144,7 +144,6 @@ set langmenu=zh_CN.UTF-8    " other settings
 set mouse=a
 set whichwrap+=<,>,h,l,[,]
 set background=dark
-set encoding=utf-8
 set backspace=2              " make backspace work like most other apps
 set backspace=indent,eol,start
 set selection=inclusive
@@ -158,6 +157,7 @@ set ruler       " 显示当前的行号列号
 set showcmd     " 在状态栏显示正在输入的命令
 set showmode    " 左下角显示当前vim模式
 set number      " 显示行号
+" set relativenumber
 set showmatch   " 括号配对情况, 跳转并高亮一下匹配的括号
 set matchtime=2 " How many tenths of a second to blink when matching brackets
 
@@ -180,9 +180,13 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l> " muting search highlighting
 " 具体编辑文件类型的一般设置，比如不要 tab 等
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby,javascript,html,css,xml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+autocmd FileType java set omnifunc=javacomplete#Complete
+
+
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+
 
 " auto open or close NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -286,7 +290,6 @@ map <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 
-
 " NERDTree Config Start----------------------------- 
 " 工程文件浏览
 " 查看工程文件列表
@@ -296,19 +299,26 @@ autocmd vimenter * NERDTree  "自动开启Nerdtree
 "开启/关闭nerdtree快捷键
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
+map <F4> :TagbarToggle<CR>
+nmap ,t :NERDTreeFind<CR>
+
+
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
-"打开vim时如果没有文件自动打开NERDTree
-autocmd vimenter * if !argc()|NERDTree|endif
+autocmd vimenter * if !argc()|NERDTree|endif  " 打开vim时如果没有文件自动打开NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif       "当NERDTree为剩下的唯一窗口时自动关闭
+autocmd vimenter * wincmd l
+
+
+let NERDTreeMinimalUI = 1 " Making it prettier
+let NERDTreeDirArrows = 1
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
 let g:NERDTreeDirArrowExpandable = '▸'  "设置树的显示图标
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeShowLineNumbers=1  " 是否显示行号
+let g:NERDTreeAutoCenter=1
 let g:NERDTreeHidden=0     "不显示隐藏文件
-let NERDTreeMinimalUI = 1 "Making it prettier
-let NERDTreeDirArrows = 1
-let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
-let g:NERDTreeDirArrows = 0
 let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:tagbar_autoshowtag = 1
 let g:NERDTreeIndicatorMapCustom = {
       \ "Modified"  : "✹",
       \ "Staged"    : "✚",
