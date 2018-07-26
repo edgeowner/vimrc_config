@@ -58,7 +58,7 @@ ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# 自动更新的时间间隔，单位是天，这里设置 30 天更新一次
+# 自动更新的时间间隔，单位是天，这里设置 7 天更新一次
 export UPDATE_ZSH_DAYS=7
 
 # 按tab键补全命令的时候,如果没什么可补全的就会出现三个红点,更人性化显示，这里我们启用
@@ -125,6 +125,7 @@ export MONGO_PATH=/usr/local/Cellar/mongodb/3.6.5
 export PATH=$PATH:$MONGO_PATH/bin
 
 eval "$(docker-machine env default)"
+eval "$(pyenv init -)"
 
 #[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
 
