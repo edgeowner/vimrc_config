@@ -53,5 +53,8 @@
 * A…….Zoom (maximize/minimize) the NERDTree window………….|NERDTree-A|
 
 ### 参考
-1. [Vim的NerdTree插件](https://segmentfault.com/a/1190000015143474)
+1. [Vim的NerdTree插件(美化)](https://segmentfault.com/a/1190000015143474)
+2. [Nerd Fonts(美化字体下载)](http://nerdfonts.com/)
+3. [一个前端开发工程师的Vim跟IDE一样](https://segmentfault.com/a/1190000008097357)
+4. [Vimawesome(Vim颜色主题)](https://vimawesome.com/plugin/vim-colorschemes-sweeter-than-fiction)
 
