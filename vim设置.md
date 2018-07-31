@@ -25,6 +25,7 @@ mathjax: true
 16. [耗时整整一天，整理出的超详细清晰的vim，vimrc配置](https://www.jianshu.com/p/a8033ea6b307)
 17. [Vim的NerdTree插件](https://segmentfault.com/a/1190000015143474)
 18. [如何让vim成为我们的神器](https://segmentfault.com/a/1190000011466454)
+19. [Vim插件简单介绍](https://segmentfault.com/a/1190000000630547)
 
 
 
