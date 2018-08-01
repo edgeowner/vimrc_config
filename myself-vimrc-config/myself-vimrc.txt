@@ -47,6 +47,7 @@ Plugin 'gmarik/vundle'
 " Nerdtree 文件目录树插件
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -69,7 +70,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
-Plugin 'tomasr/molokai'
 Plugin 'mhinz/vim-signify'
 Plugin 'fisadev/vim-isort'
 Plugin 'fisadev/dragvisuals.vim'
@@ -92,6 +92,10 @@ Plugin 'othree/yajs.vim'
 " JS语法高亮
 " Plugin 'sheerun/vim-polyglot'
 " Plugin 'w0rp/ale'
+
+" vim主题颜色
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
 
 Plugin 'wincent/command-t'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -341,10 +345,12 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeShowLineNumbers=1  " 是否显示行号
 let g:NERDTreeAutoCenter=1
 let g:NERDTreeHidden=0     "不显示隐藏文件
+let g:NERDTreeShowIgnoredStatus = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_focus_on_files = 1
 let g:tagbar_autoshowtag = 1
+
 let g:NERDTreeIndicatorMapCustom = {
       \ "Modified"  : "✹",
       \ "Staged"    : "✚",
