@@ -131,7 +131,8 @@ Plugin 'matchit.zip'        " XML/HTML tags navigation
 Plugin 'Wombat'             " Gvim colorscheme
 Plugin 'YankRing.vim'       " Yank history navigation
 
-
+" Solidity语言vim开发插件
+Plugin 'tomlion/vim-solidity'
 " ============================================================================
 " Install plugins the first time vim runs
 
@@ -323,13 +324,14 @@ let g:tagbar_autofocus = 1
 " auto open or close NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
+"let g:NERDTreeWinSize = 30 "设定 NERDTree 视窗大小
 "开启/关闭nerdtree快捷键
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :TagbarToggle<CR>
 nmap ,t :NERDTreeFind<CR>
 
+let NERDTreeAutoDeleteBuffer=1
 
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 autocmd vimenter * if !argc()|NERDTree|endif  " 打开vim时如果没有文件自动打开NERDTree
@@ -735,7 +737,6 @@ augroup END
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
-set foldmethod=syntax
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
@@ -748,6 +749,7 @@ let g:javascript_conceal_super                = "Ω"
 let g:javascript_conceal_arrow_function       = "⇒"
 let g:javascript_conceal_noarg_arrow_function = "?"
 let g:javascript_conceal_underscore_arrow_function = "?"
+" set foldmethod=syntax
 set conceallevel=1
 " 2. js-beautify
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
